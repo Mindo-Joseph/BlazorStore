@@ -1,0 +1,48 @@
+@using BlazorStore.Models
+@using BlazorStore.Data
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Identity
+@using BlazorStore.Services
+@using Microsoft.AspNetCore.Http;
+@using System.Threading;
+@inject IHttpContextAccessor _httpContextAccessor
+@inject ApplicationDbContext _context
+@inject AllItemStateModel AllItemStateModel
+@inject IImageService _imageService
+@inject IJSRuntime JSRuntime
+@inject SignInManager<CustomUser> _signInManager
+@inject UserManager<CustomUser> _userManager
+@inject NavigationManager NavigationManager
+@inject IUserDetector _userDetector
+@inject ICanUserComment _canUserComment
+
+@page "/product/new"
+<div class="container">
+  <form >
+            <fieldset class="new-product">
+          
+          <legend><span class="number">1</span> Add a product </legend>
+          
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+          
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description">
+          
+          <label for="content">Content:</label>
+          <input type="text" id="content" name="content">
+
+          <label for="price">Price:</label>
+          <input type="text" id="price" name="price">
+           <label for="rate">RateValue:</label>
+          <input type="text" id="rate" name="rate">
+           <label for="ready">Is product ready:</label>
+          <input type="checkbox" id="ready" name="ready">
+           </fieldset>
+    </form>
+<div class="custom-file">
+  <input type="file" class="button" id="customFileLang" lang="es">
+  <label class="custom-file-label" for="customFileLang">Add Image</label>
+</div>
+
+  </div>

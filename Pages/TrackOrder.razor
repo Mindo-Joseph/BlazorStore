@@ -183,7 +183,7 @@ else
                                                 <p class="product-name"><a href="/product/@item.Slug">@item.Name</a></p>
                                                 <p class="product-des">@item.Category.Name</p>
                                             </td>
-                                            <td class="price" data-title="Price"><span>$@item.Price </span></td>
+                                            <td class="price" data-title="Price"><span>KES @item.Price </span></td>
                                             <td class="qty" data-title="Qty">
                                                 <!-- Input Order -->
                                                 <div class="input-group">
@@ -193,7 +193,7 @@ else
                                                 </div>
                                                 <!--/ End Input Order -->
                                             </td>
-                                            <td class="total-amount" data-title="Total"><span>$@((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></td>
+                                            <td class="total-amount" data-title="Total"><span>KES @((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></td>
                                         </tr>
 
                                     }
@@ -261,23 +261,23 @@ else
                                 <div class="col-lg-4 col-md-7 col-12">
                                     <div class="right">
                                         <ul>
-                                            <li>Cart Subtotal<span>$@Item_total_price.ToString("0.##")</span></li>
+                                            <li>Cart Subtotal<span>KES @Item_total_price.ToString("0.##")</span></li>
                                             @if (Item_total_price >= (float)40)
                                             {
                                                 total = (Item_total_price) * taxRate / (float)100 + Item_total_price;
                                                 <li>Shipping<span>Free</span></li>
-                                                <li class="last">You Pay<span>$@total.ToString("0.##")</span></li>
+                                                <li class="last">You Pay<span>KES @total.ToString("0.##")</span></li>
                                             }
                                             else if (ListOrders.Count == 0)
                                             {
-                                                <li>Shipping<span>$0.00</span></li>
-                                                <li class="last">You Pay<span>$0.00</span></li>
+                                                <li>Shipping<span>KES 0.00</span></li>
+                                                <li class="last">You Pay<span>KES 0.00</span></li>
                                             }
                                             else
                                             {
                                                 total = (Item_total_price + (float)20) * taxRate / (float)100 + (Item_total_price + (float)20);
-                                                <li>Shipping<span>$20.00</span></li>
-                                                <li class="last">You Pay<span>$@((total).ToString("0.##"))</span></li>
+                                                <li>Shipping<span>KES 20.00</span></li>
+                                                <li class="last">You Pay<span>KES @((total).ToString("0.##"))</span></li>
                                             }
 
                                         </ul>

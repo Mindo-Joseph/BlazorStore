@@ -247,23 +247,23 @@ else
                                         }
                                         //total = (Item_total_price) * taxRate / (float)100 + Item_total_price;
                                     }
-                                    <li>Sub Total<span>$@Item_total_price.ToString("0.##")</span></li>
+                                    <li>Sub Total<span>KES @Item_total_price.ToString("0.##")</span></li>
                                     @if (Item_total_price >= (float)40)
                                     {
                                         total = (Item_total_price) * taxRate / (float)100 + Item_total_price;
                                         <li>(+) Shipping<span>Free</span></li>
-                                        <li class="last">Total<span>$@total.ToString("0.##")</span></li>
+                                        <li class="last">Total<span>KES @total.ToString("0.##")</span></li>
                                     }
                                     else if (CartItem.Count == 0)
                                     {
                                         <li>Shipping<span>$0.00</span></li>
-                                        <li class="last">You Pay<span>$0.00</span></li>
+                                        <li class="last">You Pay<span>KES 0.00</span></li>
                                     }
                                     else
                                     {
                                         total = (Item_total_price + (float)20) * taxRate / (float)100 + (Item_total_price + (float)20);
-                                        <li>(+) Shipping<span>$20.00</span></li>
-                                        <li class="last">Total<span>$@((total).ToString("0.##"))</span></li>
+                                        <li>(+) Shipping<span>KES 20.00</span></li>
+                                        <li class="last">Total<span>KES @((total).ToString("0.##"))</span></li>
 
                                     }
 

@@ -1,4 +1,4 @@
-# Personal E-Commerce Website Using Blazor
+****# Personal E-Commerce Website Using Blazor
 
 E-Commerce websites are online portals that facilitate online transactions of goods and services through means of the transfer of information and funds over the Internet.
 
@@ -11,7 +11,7 @@ This Ecommerce also have a blog site included, therefore, owner can create blog 
 Last but not least, user can purchase the product simply by click on process to check out in the cart. I use Stripe API to handle the payment, and customer credit card to 100% safe by using Stripe API.
 
 If you want to visit my ecommerce online market. You can click on this link to have a quick look at it:
-
+****
 http://duylanle-ecommerce.herokuapp.com/
 
 Notes: Because my ecommerce is hosted on a free Heroku server. So, it will take a minute to boot up.

@@ -156,7 +156,7 @@ else
                                                     <a style="cursor: pointer;" @onclick="(() => RemoveFromCart(itemid))" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
                                                     <a class="cart-img" target="_parent" href="/product/@item.Slug"><img src="@_imageService.DecodeFile(item.ImageData, item.ContentType)" style="width:70px;height:70px;" alt="#"></a>
                                                     <h4><a target="_parent" href="/product/@item.Slug">@item.Name</a></h4>
-                                                    <p class="quantity">@(item.Quantity)x - <span class="amount">$@((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></p>
+                                                    <p class="quantity">@(item.Quantity)x - <span class="amount">KES @((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></p>
                                                 </li>
                                             }
 
@@ -169,7 +169,7 @@ else
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Total</span>
-                                            <span class="total-amount">$@total.ToString("0.##")</span>
+                                            <span class="total-amount">KES @total.ToString("0.##")</span>
                                         </div>
                                         <a href="/cart" class="btn animate">Checkout</a>
                                     </div>
@@ -282,12 +282,12 @@ else
                     <div class="fs-5 mb-3">
                         @if (CurrentItem.ItemSaleOffId != ItemSaleOffId)
                         {
-                            <span style="font-size:35px;" class="text-decoration-line-through old">$@CurrentItem.Price</span>
-                            <span style="font-size:35px;">$@CurrentItem.ListPrice(_context, CurrentItem.Price, CurrentItem.ItemSaleOffId)</span>
+                            <span style="font-size:35px;" class="text-decoration-line-through old">KES @CurrentItem.Price</span>
+                            <span style="font-size:35px;">KES @CurrentItem.ListPrice(_context, CurrentItem.Price, CurrentItem.ItemSaleOffId)</span>
                         }
                         else
                         {
-                            <span style="font-size:35px;">$@CurrentItem.Price</span>
+                            <span style="font-size:35px;">KES @CurrentItem.Price</span>
                         }
 
                     </div>
@@ -464,12 +464,12 @@ else
                                         <div class="product-price">
                                             @if (item.ItemSaleOffId != ItemSaleOffId)
                                             {
-                                                <span class="old">$@item.Price</span>
-                                                <span>$@item.ListPrice(_context, item.Price, item.ItemSaleOffId)</span>
+                                                <span class="old">KES @item.Price</span>
+                                                <span>KES @item.ListPrice(_context, item.Price, item.ItemSaleOffId)</span>
                                             }
                                             else
                                             {
-                                                <span>$@item.Price</span>
+                                                <span>KES @item.Price</span>
                                             }
 
                                         </div>

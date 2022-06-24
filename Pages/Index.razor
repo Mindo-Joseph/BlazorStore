@@ -159,7 +159,7 @@ else
                                                     <a style="cursor: pointer;" @onclick="(() => RemoveFromCart(itemid))" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
                                                     <a class="cart-img" target="_parent" href="/product/@item.Slug"><img src="@_imageService.DecodeFile(item.ImageData, item.ContentType)" style="width:70px;height:70px;" alt="#"></a>
                                                     <h4><a target="_parent" href="/product/@item.Slug">@item.Name</a></h4>
-                                                    <p class="quantity">@(item.Quantity)x - <span class="amount">$@((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></p>
+                                                    <p class="quantity">@(item.Quantity)x - <span class="amount">KES @((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></p>
                                                 </li>
                                             }
 
@@ -171,7 +171,7 @@ else
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Total</span>
-                                            <span class="total-amount">$@total.ToString("0.##")</span>
+                                            <span class="total-amount">KES @total.ToString("0.##")</span>
                                         </div>
                                         <a href="/cart" class="btn animate">Checkout</a>
                                     </div>
@@ -361,12 +361,12 @@ else
                                                             <div class="product-price">
                                                                 @if (item.ItemSaleOffId != ItemSaleOffId)
                                                                 {
-                                                                    <span class="old">$@item.Price</span>
-                                                                    <span>$@item.ListPrice(_context, item.Price, item.ItemSaleOffId)</span>
+                                                                    <span class="old">KES @item.Price</span>
+                                                                    <span>KES @item.ListPrice(_context, item.Price, item.ItemSaleOffId)</span>
                                                                 }
                                                                 else
                                                                 {
-                                                                    <span>$@item.Price</span>
+                                                                    <span>KES @item.Price</span>
                                                                 }
                                                             </div>
                                                         </div>
@@ -503,12 +503,12 @@ else
                                         <div class="product-price">
                                             @if (item.ItemSaleOffId != ItemSaleOffId)
                                             {
-                                                <span class="old">$@item.Price</span>
-                                                <span>$@item.ListPrice(_context, item.Price, item.ItemSaleOffId)</span>
+                                                <span class="old">KES @item.Price</span>
+                                                <span>KES @item.ListPrice(_context, item.Price, item.ItemSaleOffId)</span>
                                             }
                                             else
                                             {
-                                                <span>$@item.Price</span>
+                                                <span>KES @item.Price</span>
                                             }
 
                                         </div>
@@ -575,7 +575,7 @@ else
                                     <div class="col-lg-6 col-md-6 col-12 no-padding">
                                         <div class="content">
                                             <h4 class="title"><a href="product/@item.Slug">@item.Name</a></h4>
-                                            <p class="price with-discount">$@item.ListPrice(_context, item.Price, item.ItemSaleOffId)</p>
+                                            <p class="price with-discount">KES @item.ListPrice(_context, item.Price, item.ItemSaleOffId)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -610,7 +610,7 @@ else
                                     <div class="col-lg-6 col-md-6 col-12 no-padding">
                                         <div class="content">
                                             <h4 class="title"><a href="product/@item.Slug">@item.Name</a></h4>
-                                            <p class="price with-discount">$@item.ListPrice(_context, item.Price, item.ItemSaleOffId)</p>
+                                            <p class="price with-discount">KES @item.ListPrice(_context, item.Price, item.ItemSaleOffId)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -646,7 +646,7 @@ else
                                     <div class="col-lg-6 col-md-6 col-12 no-padding">
                                         <div class="content">
                                             <h4 class="title"><a href="product/@item.Slug">@item.Name</a></h4>
-                                            <p class="price with-discount">$@item.ListPrice(_context, item.Price, item.ItemSaleOffId)</p>
+                                            <p class="price with-discount">KES @item.ListPrice(_context, item.Price, item.ItemSaleOffId)</p>
                                         </div>
                                     </div>
                                 </div>

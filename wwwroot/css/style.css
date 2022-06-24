@@ -153,6 +153,13 @@ Version:1.0
   display: inline-block;
   padding: 0px;
 }
+.new-product{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
 .preloader-icon span {
   position: absolute;
   display: inline-block;

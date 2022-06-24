@@ -129,7 +129,7 @@
                                                 <a style="cursor: pointer;" @onclick="(() => RemoveFromCart(itemid))" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
                                                 <a class="cart-img" target="_parent" href="/product/@item.Slug"><img src="@_imageService.DecodeFile(item.ImageData, item.ContentType)" style="width:70px;height:70px;" alt="#"></a>
                                                 <h4><a target="_parent" href="/product/@item.Slug">@item.Name</a></h4>
-                                                <p class="quantity">@(item.Quantity)x - <span class="amount">$@((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></p>
+                                                <p class="quantity">@(item.Quantity)x - <span class="amount">KES @((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></p>
                                             </li>
                                         }
 
@@ -141,7 +141,7 @@
                                 <div class="bottom">
                                     <div class="total">
                                         <span>Total</span>
-                                        <span class="total-amount">$@total</span>
+                                        <span class="total-amount">KES @total</span>
                                     </div>
                                     <a href="/cart" class="btn animate">Checkout</a>
                                 </div>

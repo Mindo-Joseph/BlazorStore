@@ -153,7 +153,7 @@ else
                                                     <a style="cursor: pointer;" @onclick="(() => RemoveFromCart(itemid))" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
                                                     <a class="cart-img" target="_parent" href="/product/@item.Slug"><img src="@_imageService.DecodeFile(item.ImageData, item.ContentType)" style="width:70px;height:70px;" alt="#"></a>
                                                     <h4><a target="_parent" href="/product/@item.Slug">@item.Name</a></h4>
-                                                    <p class="quantity">@(item.Quantity)x - <span class="amount">$@((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></p>
+                                                    <p class="quantity">@(item.Quantity)x - <span class="amount">KES @((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></p>
                                                 </li>
                                             }
 
@@ -165,7 +165,7 @@ else
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Total</span>
-                                            <span class="total-amount">$@total.ToString("0.##")</span>
+                                            <span class="total-amount">KES @total.ToString("0.##")</span>
                                         </div>
                                         <a href="/cart" class="btn animate">Checkout</a>
                                     </div>
@@ -284,7 +284,7 @@ else
                                             <p class="product-name"><a href="#">@item.Name</a></p>
                                             <p class="product-des">@item.Category.Name</p>
                                         </td>
-                                        <td class="price" data-title="Price"><span>$@item.Price </span></td>
+                                        <td class="price" data-title="Price"><span>KES @item.Price </span></td>
                                         <td class="qty" data-title="Qty">
                                             <!-- Input Order -->
                                             <div class="input-group">
@@ -302,7 +302,7 @@ else
                                             </div>
                                             <!--/ End Input Order -->
                                         </td>
-                                        <td class="total-amount" data-title="Total"><span>$@((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></td>
+                                        <td class="total-amount" data-title="Total"><span>KES @((Convert.ToDecimal(item.Price) * Convert.ToDecimal(item.Quantity)).ToString("0.##"))</span></td>
                                         <td class="action" data-title="Remove"><a style="cursor: pointer;" @onclick="(() => RemoveFromCart(itemid))"><i class="ti-trash remove-icon"></i></a></td>
                                     </tr>
 
@@ -332,29 +332,29 @@ else
                                             <button class="btn">Apply</button>
                                         </form>
                                     </div>*@
-                                    <p> * Shipping (+20$), Free Shipping For Order More Than $40</p>
+                                    <p> * Shipping (KES 300), Free Shipping For Order More Than KES 400</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-7 col-12">
                                 <div class="right">
                                     <ul>
-                                        <li>Cart Subtotal<span>$@Item_total_price.ToString("0.##")</span></li>
+                                        <li>Cart Subtotal<span>KES @Item_total_price.ToString("0.##")</span></li>
                                         @if (Item_total_price >= (float)40)
                                         {
                                             total = (Item_total_price) * taxRate / (float)100 + Item_total_price;
                                             <li>Shipping<span>Free</span></li>
-                                            <li class="last">You Pay<span>$@total.ToString("0.##")</span></li>
+                                            <li class="last">You Pay<span>KES @total.ToString("0.##")</span></li>
                                         }
                                         else if (CartItem.Count == 0)
                                         {
-                                            <li>Shipping<span>$0.00</span></li>
-                                            <li class="last">You Pay<span>$0.00</span></li>
+                                            <li>Shipping<span>KES 0.00</span></li>
+                                            <li class="last">You Pay<span>KES 0.00</span></li>
                                         }
                                         else
                                         {
                                             total = (Item_total_price + (float)20) * taxRate / (float)100 + (Item_total_price + (float)20);
-                                            <li>Shipping<span>$20.00</span></li>
-                                            <li class="last">You Pay<span>$@((total).ToString("0.##"))</span></li>
+                                            <li>Shipping<span>KES 20.00</span></li>
+                                            <li class="last">You Pay<span>KES @((total).ToString("0.##"))</span></li>
                                         }
 
                                     </ul>
